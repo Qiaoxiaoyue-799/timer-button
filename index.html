@@ -35,8 +35,9 @@
             var radStatus,
                 $time = $('details input[type="number"]'),
                 $title = $('details input[type="text"]'),
-                $txtCode  = $('details textarea'),
+                $Code  = $('details textarea'),
                 $fmButton = $('details form');
+
             $fmButton.submit(function(e) {
                 e.preventDefault();
                 radStatus  = $('details input[type="radio"]:checked');
@@ -44,7 +45,8 @@
                     tLength: Number($time.val()),
                     container:'#main',
                     enable: radStatus.val() === 'true',
-                    title: $title.val()
+                    title: $title.val(),
+                    onClick: new Function($Code.val())
                 });
             })
         })

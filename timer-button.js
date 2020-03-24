@@ -41,14 +41,14 @@ var $timerButton =(function(){
                         $btn.val(cfg.title+'('+num+'s)');
                     }
                 },1000);
-            });
-            
+            }); 
         }
-        
+        $btn.click(function(){
+            cfg.onClick();
+        })
+            
     }
 
-    
-    
     return{
         show:show
     }
